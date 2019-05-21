@@ -1,0 +1,27 @@
+/**
+ * @author msfata ProgrammingHelp
+ *
+ */
+public class ArrayDuplicate {
+	public static void main(String[] args) {
+		/*
+		 * using the method with return type array
+		 */
+		String[] oreginalArray = { "Mohammed ", "shafiq", "fata" };
+		String[] reversedArray = arrayReverse(oreginalArray);
+		for (String string : reversedArray) {
+			System.out.println(string);
+		}
+	}
+
+	/*
+	 * returning array in java method
+	 */
+	private static String[] arrayReverse(String[] input) {
+		String[] temp = new String[input.length];
+		for (int i = 0; i < input.length; i++) {
+			temp[i] = input[temp.length - i - 1];
+		}
+		return temp;
+	}
+}
